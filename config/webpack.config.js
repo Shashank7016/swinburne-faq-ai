@@ -339,6 +339,7 @@ module.exports = function (webpackEnv) {
     module: {
       strictExportPresence: true,
       rules: [
+        
         // Handle node_modules packages that contain sourcemaps
         shouldUseSourceMap && {
           enforce: 'pre',
@@ -346,6 +347,25 @@ module.exports = function (webpackEnv) {
           test: /\.(js|mjs|jsx|ts|tsx|css)$/,
           loader: require.resolve('source-map-loader'),
         },
+          // Add the LESS loader configuration here
+    {
+      test: /\.less$/,
+      use: [
+          'style-loader',
+          'css-loader',
+          {
+              loader: 'less-loader',
+              options: {
+                  lessOptions: {
+                      modifyVars: {
+                          // Override Ant Design's default theme variables if needed
+                      },
+                      javascriptEnabled: true
+                  }
+              }
+          }
+      ]
+  },  
         {
           // "oneOf" will traverse all following loaders until one will
           // match the requirements. When no loader matches it will fall
@@ -725,7 +745,7 @@ module.exports = function (webpackEnv) {
       !disableESLintPlugin &&
         new ESLintPlugin({
           // Plugin options
-          extensions: ['js', 'mjs', 'jsx', 'ts', 'tsx'],
+          extensions: ['js', 'mjs', 'jsx','.less', 'ts', 'tsx'],
           formatter: require.resolve('react-dev-utils/eslintFormatter'),
           eslintPath: require.resolve('eslint'),
           failOnError: !(isEnvDevelopment && emitErrorsAsWarnings),

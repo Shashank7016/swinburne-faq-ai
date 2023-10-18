@@ -1,0 +1,8 @@
+
+torch
+transformers
+sklearn
+flask
+flask_cors
+python-docx
+boto3

@@ -1,15 +1,14 @@
-
 .App {
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px;
-    background-color: #f4f4f4; /* Light grey background */
+    background-color: #f4f4f4;
 }
 
 h1 {
-    color: #003366; /* Swinburne color theme */
+    color: #003366;
 }
 
 .logo {
@@ -26,7 +25,7 @@ input {
 }
 
 button {
-    background-color: #003366; /* Swinburne color theme */
+    background-color: #003366;
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -36,5 +35,33 @@ button {
 }
 
 button:hover {
-    background-color: #002244; /* Darker shade for hover effect */
+    background-color: #002244;
 }
+
+/* Enhancements */
+
+/* Card styling */
+.ant-card {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* Alert styling */
+.ant-alert-warning {
+    padding: 15px 20px;
+    font-size: 16px;
+}
+
+/* Consistent spacing */
+.ant-space {
+    justify-content: center;
+}
+/* Enhanced Answer Text Styling */
+.ant-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 400;
+}
+
