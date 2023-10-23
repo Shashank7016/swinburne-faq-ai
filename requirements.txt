@@ -1,7 +1,7 @@
 
 torch
 transformers
-sklearn
+scikit-learn
 flask
 flask_cors
 python-docx
