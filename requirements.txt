@@ -5,4 +5,3 @@ scikit-learn
 flask
 flask_cors
 python-docx
-boto3
