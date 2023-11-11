@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# Swinburne Online FAQ Chatbot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project encompasses the creation of an intelligent FAQ chatbot designed to enhance the online experience for Swinburne University's staff and students. The chatbot aims to provide quick, accurate responses to user inquiries, surpassing the traditional FAQ system's capabilities. Developed using advanced natural language processing (NLP) technologies, including GPT-2 and DistilBERT, it ensures efficient and relevant information delivery.
 
-## Available Scripts
+By leveraging a React-based frontend and a Flask backend, the project achieves a balance between technological sophistication and user-friendly interaction. This report documents the development process, the challenges faced, and the outcomes achieved, reflecting a significant stride toward integrating AI into student services.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Intelligent Query Handling:** Uses a combination of GPT-2 and DistilBERT models for understanding and generating responses.
+- **User-Friendly Design:** React and Ant Design libraries provide a responsive and intuitive user interface.
+- **Local Server Hosting:** Flask backend allows for robust API endpoint creation and maintenance on a local server setup.
+- **Performance and Cost Efficiency:** A carefully selected hardware setup supports the chatbot infrastructure without compromising on performance.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Motivation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The motivation behind the Swinburne Online FAQ Chatbot project was to streamline the process of information retrieval on the Swinburne Online portal. Recognizing the inefficiency of sifting through lengthy FAQ sections and the limited availability of live chat agents, the chatbot serves as a 24/7 support system to address these challenges, thereby enhancing the overall learning experience.
 
-### `npm test`
+## Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before running this project, you will need to install the following:
 
-### `npm run build`
+- Python 3
+- Node.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Make sure you have a web browser to view the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the project repository:
 
-### `npm run eject`
+```bash
+git clone https://github.com/Shashank7016/swinburne-faq-ai.git
+cd swinburne-faq-ai
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Set up a virtual environment:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Linux or macOS
+python3 -m venv venv
+source venv/bin/activate
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Windows
+py -m venv venv
+.env\Scriptsctivate
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Install the required dependencies:
 
-## Learn More
+```bash
+pip install -r requirements.txt
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Running the Application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run the application, follow these steps:
 
-### Code Splitting
+Start the backend server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+# Make sure you are in the project directory and the virtual environment is activated
+python faq_server.py
+```
 
-### Analyzing the Bundle Size
+Start the frontend in development mode:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+# Open a new terminal and make sure you are in the project directory
+npm install
+npm start
+```
 
-### Making a Progressive Web App
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+We welcome contributions to this project! If you would like to contribute, please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork the repository and create your branch from `master`.
+2. If you've added code that should be tested, add tests.
+3. Ensure the test suite passes.
+4. Make sure your code lints.
+5. Issue that pull request!
 
-### Deployment
+Before submitting a pull request, please check the following:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Any new code or change must be properly commented and documented.
+- If you have any new feature proposal or a bug fix, open an issue first, so we discuss it.
+- Make sure to push your changes to a separate branch, not directly to `master`.
 
-### `npm run build` fails to minify
+We will review all pull requests and provide feedback where necessary. If everything is okay, we will merge your changes into the master branch. Please note that not all requests will be approved, and feedback may be given to further improve the contribution.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is released under the MIT License. See the `LICENSE` file for more details.
+
+## Contact
+
+Your Name - bryanhovak@gmail.com
+
+Project Link: [https://github.com/Shashank7016/swinburne-faq-ai](https://github.com/Shashank7016/swinburne-faq-ai)
+
+## Customizing FAQ Content
+
+To personalize the FAQ content for your use case, you can modify the questions and answers by following these steps:
+
+- Replace the contents of `Questions.docx` and `Answers.docx` with your own Q&A pairs.
+- If you have existing `.docx` files with questions and answers, place them in the same directory as `faq_server.py`.
+- Update the file names in the `faq_server.py` code to match your new `.docx` files. Change the lines where `questions_content` and `answers_content` are set to read from your files instead of the default ones.
+
+For example, if your questions file is named `CustomQuestions.docx`, update the `faq_server.py` like so:
+
+```python
+questions_content = read_docx("CustomQuestions.docx")
+```
+
+And if your answers file is named `CustomAnswers.docx`, do the same for the answers:
+
+```python
+answers_content = read_docx("CustomAnswers.docx")
+```
+
+Remember to keep the format of your `.docx` files consistent with the original ones for the code to process them correctly.
